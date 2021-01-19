@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/header_cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/navigation_header_image"
+            android:visibility="gone"/>
+
+
+        <RelativeLayout
+            android:id="@+id/profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_cover_image"
+            android:background="#6a0080"
+            android:elevation="4dp"
+
+            android:paddingBottom="24dp">
+            <android.support.v7.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:elevation="12dp"
+                android:id="@+id/view2"
+                app:cardCornerRadius="40dp"
+                android:layout_centerHorizontal="true"
+                android:innerRadius="0dp"
+                android:shape="ring"
+                android:layout_margin="10dp"
+                android:thicknessRatio="1.9">
+                <ImageView
+                    android:layout_height="80dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/user_profile_photo"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_alignParentTop="true"
+                    android:elevation="5dp"
+
+                    android:layout_centerHorizontal="true">
+                </ImageView>
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/user_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/view2"
+                android:text="Pelumi Eniodunmo"
+                android:textColor="#fff"
+                android:textSize="24sp"
+
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/user_profile_short_bio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_profile_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:text="UI/UX, Android developer, Software and AI Engineer"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_layout"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:textColor="@android:color/black"
+                android:drawableLeft="@drawable/ic_cellphone"
+                android:elevation="4dp"
+                android:drawablePadding="5dp"
+                android:padding="20dp" />
+
+            <TextView
+                android:id="@+id/emailId"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:drawablePadding="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:textColor="@android:color/black"
+                android:drawableLeft="@drawable/ic_email"
+                android:elevation="4dp"
+                android:padding="20dp" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
